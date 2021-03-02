@@ -16,7 +16,7 @@ public class MerchandizeTester {
 		String itemCode;
 		int quantity;
 		Double unitPrice;
-		List<Merchandize> ListMerchandize = new ArrayList<>();
+		List<Merchandize> merchandiseList = new ArrayList<>();
 
 		String line = null;
 
@@ -35,7 +35,7 @@ public class MerchandizeTester {
 				unitPrice = Double.parseDouble(tokens[2]);
 				
 				// creating Merchandize object using parameterised constructor
-				ListMerchandize.add(new Merchandize(itemCode, quantity, unitPrice));
+				merchandiseList.add(new Merchandize(itemCode, quantity, unitPrice));
 			}
 
 		} catch (FileNotFoundException ex) {
@@ -48,13 +48,13 @@ public class MerchandizeTester {
 
 		System.out.println("**************************************************************************");
 		// Sorting the merchandise elements in the ArrayList in an ascending order by names and displaying data per line 
-		Collections.sort(ListMerchandize, (o1, o2) -> o1.getItemCode().compareTo(o2.getItemCode()));
-		ListMerchandize.forEach((Item) -> System.out.println(Item));
+		Collections.sort(merchandiseList, (o1, o2) -> o1.getItemCode().compareTo(o2.getItemCode()));
+		merchandiseList.forEach((Item) -> System.out.println(Item));
 
 		System.out.println("**************************************************************************");
 		//Sort the merchandises in a descending order by price and displaying data per line 
-		Collections.sort(ListMerchandize, (o1, o2) -> o2.getUnitPrice().compareTo(o1.getUnitPrice()));
-		ListMerchandize.forEach((Item) -> System.out.println(Item));
+		Collections.sort(merchandiseList, (o1, o2) -> o2.getUnitPrice().compareTo(o1.getUnitPrice()));
+		merchandiseList.forEach((Item) -> System.out.println(Item));
 		
 		System.out.println("**************************************************************************");
 
