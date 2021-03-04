@@ -26,12 +26,6 @@
 				<th>Trainee_name</th>
 				<th>Branch</th>
 				<th>Percentage</th>
-				<%-- <th>email</th>
-				<th>dob</th>
-				<c:if test="${user.profile == 'admin'}">
-				<th>delete</th>
-				<th>update</th>
-				</c:if> --%>
 			</tr>
 		</thead>
 		<tbody>
@@ -41,11 +35,6 @@
 					<td><c:out value="${trainee.trainee_name}" /></td>
 					<td><c:out value="${trainee.branch}" /></td>
 					<td><c:out value="${trainee.percentage}" /></td>
-					<%-- 
-					<td><c:out value="${trainee.email}" /></td><c:if test="${user.profile == 'admin'}">
-					<td><a href="traineecontroller.do?action=delete&id=<c:out value="${trainee.id }"/>">delete</a></td>
-					<td><a href="traineecontroller.do?action=update&id=<c:out value="${trainee.id }"/>">update</a></td>
-					</c:if> --%>
 					
 				</tr>
 			</c:forEach>
