@@ -22,6 +22,8 @@ public class CustomerDaoImpl implements CustomerDao {
 	public void addCustomer(Customer customer) {
         Date tempdate=customer.getDob();
 		java.sql.Date sqlDate = new java.sql.Date(tempdate.getTime());
+		
+		
 		PreparedStatement pstmt;
 		try {
 			pstmt = connection.prepareStatement("insert into customer(name, address,phoneNumber , dob) values (?,?,?,?)");
