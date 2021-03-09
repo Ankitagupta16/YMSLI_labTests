@@ -1,0 +1,20 @@
+1. In JDBC, one needs to write code to map the object model’s data representation to the schema of the relational model.
+Hibernate maps the object model’s data to the schema of the database itself with the help of annotations.
+
+2. JDBC enables developers to create queries and update data to a relational database using the Structured Query Language (SQL).
+Hibernate uses HQL (Hibernate Query Language) which is similar to SQL but understands object-oriented concepts like inheritance, association etc.
+
+3. JDBC code needs to be written in a try catch block as it throws checked exception(SQLexception).
+Whereas Hibernate manages the exceptions itself by marking them as unchecked.
+
+4. JDBC is database dependent i.e. one needs to write different codes for different database.
+Whereas Hibernate is database independent and same code can work for many databases with minor changes.
+
+5. Creating associations between relations is quite hard in JDBC.
+Associations like one-to-one, one-to-many, many-to-one, and many-to-many can be acquired easily with the help of annotations.
+
+other benefits of hibernate:
+
+Hibernate supports lazy initialization using proxy objects and perform actual database queries only when it’s required.
+Hibernate cache helps us in getting better performance.
+For database vendor specific feature, hibernate is suitable because we can also execute native sql queries.
